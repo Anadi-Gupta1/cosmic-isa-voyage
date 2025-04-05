@@ -49,6 +49,18 @@ const Hero = () => {
   
   return (
     <section id="home" className="relative min-h-screen flex flex-col justify-center items-center pt-16 overflow-hidden">
+      {/* NASA Eyes 3D Model in Background */}
+      <div className="absolute inset-0 z-0 opacity-40">
+        <iframe 
+          src="https://eyes.nasa.gov/apps/solar-system/#/home?interactPrompt=true&surfaceMapTiling=true&hd=true" 
+          className="w-full h-full"
+          title="NASA Eyes on the Solar System"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+          style={{ pointerEvents: "none" }} // Disable interaction with the iframe in background
+        ></iframe>
+      </div>
+      
       {/* Stars background */}
       <div className="stars-container"></div>
       
@@ -64,7 +76,7 @@ const Hero = () => {
       
       {/* Content container */}
       <div className="container mx-auto px-4 md:px-6 relative z-10 text-center">
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-3xl mx-auto backdrop-blur-sm bg-black/30 p-8 rounded-xl">
           <h1 className="font-space font-bold text-4xl md:text-6xl lg:text-7xl mb-6 text-transparent bg-clip-text bg-gradient-to-r from-white to-blue-200">
             Explore the Universe with ISA Club
           </h1>
@@ -77,13 +89,13 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
               href="#features" 
-              className="px-8 py-3 bg-space-accent text-white font-medium rounded-full hover:bg-space-accent/80 transition-all"
+              className="px-8 py-3 bg-space-accent text-white font-medium rounded-full hover:bg-space-accent/80 transition-all transform hover:scale-105"
             >
               Discover More
             </a>
             <a 
               href="#contact" 
-              className="px-8 py-3 bg-transparent border border-white/20 text-white font-medium rounded-full hover:bg-white/5 transition-all"
+              className="px-8 py-3 bg-transparent border border-white/20 text-white font-medium rounded-full hover:bg-white/5 transition-all transform hover:scale-105"
             >
               Join Us
             </a>

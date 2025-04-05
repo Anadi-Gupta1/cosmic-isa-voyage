@@ -53,15 +53,13 @@ const NavBar = () => {
     };
   }, [isMobileMenuOpen]);
 
-  // Main navigation items - removed team, contact, and gallery
+  // Updated navigation items - removed webinars and blog
   const menuItems = [
     { name: "Home", href: "#home" },
     { name: "About", href: "#about" },
     { name: "Shop", href: "#shop" },
     { name: "Courses", href: "#courses" },
     { name: "Events", href: "#events" },
-    { name: "Webinars", href: "#webinars" },
-    { name: "Blog", href: "#blog" },
     { name: "Features", href: "#features" },
   ];
 
@@ -191,31 +189,33 @@ const NavBar = () => {
         </div>
       )}
 
-      {/* Add custom CSS animations */}
-      <style jsx>{`
-        @keyframes slideDown {
-          from { transform: translateY(-10px); opacity: 0; }
-          to { transform: translateY(0); opacity: 1; }
-        }
-        
-        @keyframes fadeInRight {
-          from { transform: translateX(10px); opacity: 0; }
-          to { transform: translateX(0); opacity: 1; }
-        }
-        
-        .animate-slide-down {
-          animation: slideDown 0.3s ease-out forwards;
-        }
-        
-        .animate-fade-in {
-          animation: fadeIn 0.2s ease-out forwards;
-        }
-        
-        @keyframes fadeIn {
-          from { opacity: 0; }
-          to { opacity: 1; }
-        }
-      `}</style>
+      {/* Fix the CSS animation syntax by using the correct style format */}
+      <style>
+        {`
+          @keyframes slideDown {
+            from { transform: translateY(-10px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+          }
+          
+          @keyframes fadeInRight {
+            from { transform: translateX(10px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+          }
+          
+          .animate-slide-down {
+            animation: slideDown 0.3s ease-out forwards;
+          }
+          
+          .animate-fade-in {
+            animation: fadeIn 0.2s ease-out forwards;
+          }
+          
+          @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+          }
+        `}
+      </style>
     </nav>
   );
 };

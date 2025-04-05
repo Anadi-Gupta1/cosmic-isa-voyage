@@ -113,74 +113,6 @@ const Events = () => (
   </section>
 );
 
-const Webinars = () => (
-  <section id="webinars" className="py-24 bg-space-blue/10 relative">
-    <div className="container mx-auto px-4 md:px-6">
-      <h2 className="text-3xl md:text-4xl font-space font-bold text-center mb-4 bg-clip-text text-transparent bg-gradient-to-r from-white to-blue-200">
-        Online Webinars
-      </h2>
-      <p className="text-white/70 text-center max-w-2xl mx-auto mb-12">
-        Attend our interactive webinars with renowned astronomers and space scientists.
-      </p>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {[
-          { title: "Understanding Black Holes", speaker: "Dr. Sarah Johnson", time: "7:00 PM, April 28, 2025" },
-          { title: "Exoplanets & Life Beyond Earth", speaker: "Prof. Michael Chen", time: "6:30 PM, May 5, 2025" },
-        ].map((webinar, index) => (
-          <div key={index} className="glass-card rounded-xl p-6 transition-all hover:bg-white/10">
-            <span className="inline-block px-3 py-1 bg-space-accent/20 text-space-accent rounded-full text-xs mb-4">Live Webinar</span>
-            <h3 className="text-xl font-medium text-white mb-2">{webinar.title}</h3>
-            <p className="text-white/80 mb-1">{webinar.speaker}</p>
-            <p className="text-white/60 text-sm mb-4">{webinar.time}</p>
-            <a href="#" className="inline-block bg-space-accent text-white px-4 py-2 rounded-full hover:bg-space-accent/80 transition-all text-sm">
-              Reserve Your Spot
-            </a>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
-);
-
-const Blog = () => (
-  <section id="blog" className="py-24 relative">
-    <div className="container mx-auto px-4 md:px-6">
-      <h2 className="text-3xl md:text-4xl font-space font-bold text-center mb-4 bg-clip-text text-transparent bg-gradient-to-r from-white to-blue-200">
-        Space Blog
-      </h2>
-      <p className="text-white/70 text-center max-w-2xl mx-auto mb-12">
-        Discover the latest in astronomy news, research, and cosmic wonders.
-      </p>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        {[
-          { title: "New Discoveries from the James Webb Telescope", category: "Research", date: "April 2, 2025" },
-          { title: "Understanding the Northern Lights", category: "Education", date: "March 28, 2025" },
-          { title: "The Future of Space Tourism", category: "Technology", date: "March 15, 2025" },
-        ].map((post, index) => (
-          <div key={index} className="glass-card rounded-xl overflow-hidden transition-transform hover:scale-105">
-            <div className="h-40 bg-gradient-to-br from-space-purple/50 to-space-blue/30"></div>
-            <div className="p-5">
-              <div className="flex justify-between items-center mb-3">
-                <span className="text-space-accent text-xs">{post.category}</span>
-                <span className="text-white/40 text-xs">{post.date}</span>
-              </div>
-              <h3 className="font-medium text-white mb-3">{post.title}</h3>
-              <a href="#" className="text-white/80 hover:text-space-accent transition-colors text-sm">
-                Read more →
-              </a>
-            </div>
-          </div>
-        ))}
-      </div>
-      <div className="text-center mt-10">
-        <a href="#" className="inline-block border border-white/20 text-white px-6 py-3 rounded-full hover:bg-white/5 transition-all">
-          View All Articles
-        </a>
-      </div>
-    </div>
-  </section>
-);
-
 const NasaEyes = () => (
   <section id="nasa-eyes" className="py-16 md:py-24 relative">
     <div className="container mx-auto px-4 md:px-6">
@@ -210,14 +142,10 @@ const Index = () => {
       <NavBar />
       <Hero />
       <About />
-      <NasaEyes />
-      <Shop />
       <Courses />
-      <Gallery />
       <Events />
+      <Gallery />
       <Team />
-      <Webinars />
-      <Blog />
       <Features />
       <Contact />
       <Footer />
