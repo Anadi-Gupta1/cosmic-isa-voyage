@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Instagram, User, ShoppingBag } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const NavBar = () => {
@@ -23,6 +23,11 @@ const NavBar = () => {
     { name: "About", href: "#about" },
     { name: "Gallery", href: "#gallery" },
     { name: "Team", href: "#team" },
+    { name: "Shop", href: "#shop" },
+    { name: "Courses", href: "#courses" },
+    { name: "Events", href: "#events" },
+    { name: "Webinars", href: "#webinars" },
+    { name: "Blog", href: "#blog" },
     { name: "Features", href: "#features" },
     { name: "Contact", href: "#contact" },
   ];
@@ -50,7 +55,7 @@ const NavBar = () => {
         </a>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex items-center gap-6">
+        <div className="hidden md:flex items-center gap-4">
           {menuItems.map((item) => (
             <a
               key={item.name}
@@ -62,8 +67,16 @@ const NavBar = () => {
           ))}
         </div>
 
-        {/* Join Button (Desktop) */}
-        <div className="hidden md:block">
+        {/* Login/Profile Button & Join Button (Desktop) */}
+        <div className="hidden md:flex items-center gap-3">
+          <a
+            href="#login"
+            className="flex items-center gap-1.5 text-white/90 hover:text-white transition-colors"
+            aria-label="Login or Profile"
+          >
+            <User size={18} />
+            <span>Login</span>
+          </a>
           <a
             href="#contact"
             className="bg-space-accent text-white px-5 py-2 rounded-full hover:bg-space-accent/80 transition-all font-medium text-sm"
@@ -96,6 +109,14 @@ const NavBar = () => {
                 {item.name}
               </a>
             ))}
+            <a
+              href="#login"
+              className="flex items-center gap-2 text-white/90 hover:text-white transition-colors py-2"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              <User size={18} />
+              <span>Login</span>
+            </a>
             <a
               href="#contact"
               className="bg-space-accent text-white px-5 py-2 rounded-full hover:bg-space-accent/80 transition-all font-medium text-base text-center"
